@@ -1,0 +1,12 @@
+<h3>Username: {{ request.user.username }}</h3>
+{% if request.user.display_name %}
+    <h3>Display Name: {{ request.user.display_name }}</h3>
+{% else %}
+    <h3>No Display Name Assigned</h3>
+{% endif %}
+
+<h3>Auth User Model: {{ AUTH_USER_MODEL }}</h3>
+
+<a href="/register/">Register</a>
+<a href="/login/">Login</a>
+<a href="/logout/">Logout</a>
